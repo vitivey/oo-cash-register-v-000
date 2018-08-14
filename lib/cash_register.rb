@@ -31,6 +31,7 @@ class CashRegister
               array << item
             end
           end
+          array
         end
 
         def void_last_transaction
