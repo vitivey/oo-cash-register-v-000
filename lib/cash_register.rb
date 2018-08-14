@@ -25,7 +25,12 @@ class CashRegister
         end
 
         def items
-          @@items_hash
+          array=[]
+          @@items_hash.collect do |item, quantity|
+            until array.select {|item| item}.size ==quantity
+              array << item
+            end
+          end
         end
 
         def void_last_transaction
