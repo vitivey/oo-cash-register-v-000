@@ -27,7 +27,11 @@ class CashRegister
         def items
           array=[]
           @@items_hash.collect do |item, quantity|
-            while array.select {|item| item}.size <= quantity
+            i=0
+            while i <=quantity
+              array << item
+              i+=1
+            end
               array << item
             end
           end
