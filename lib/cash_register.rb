@@ -2,7 +2,7 @@ require "pry"
 
 class CashRegister
   attr_accessor :total, :title, :price, :discount
-
+  @@items_hash={}
         def initialize(discount=0)
           @total=0
           @discount=discount
@@ -24,7 +24,7 @@ class CashRegister
         end
 
         def items
-          @@items_hash
+          items_hash[@title] = quantity
         end
 
         def void_last_transaction
