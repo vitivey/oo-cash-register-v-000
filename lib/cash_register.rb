@@ -22,7 +22,7 @@ class CashRegister
         end
 
         def items
-          self.class
+          @@item_list
         end
 
         def void_last_transaction
