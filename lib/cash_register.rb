@@ -6,13 +6,14 @@ class CashRegister
         def initialize(discount=0)
           @total=0
           @discount=discount
-          @@items_hash={}
+          @items_hash={}
         end
 
         def add_item(title, price, quantity=1)
           @total+=price*quantity
           @title=title
-          @@items_hash[@title] = quantity
+          @items_hash[@title] = quantity
+          @@last_transaction=price
         end
 
         def apply_discount
@@ -26,7 +27,7 @@ class CashRegister
 
         def items
           array=[]
-          @@items_hash.collect do |item, quantity|
+          @items_hash.collect do |item, quantity|
             i=0
             while i < quantity
               array << item
@@ -37,7 +38,7 @@ class CashRegister
         end
 
         def void_last_transaction
-
+          
         end
 
 end
