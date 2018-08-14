@@ -35,12 +35,11 @@ class CashRegister
               i+=1
             end
           end
-          binding.pry
           array
         end
 
         def void_last_transaction
-          @transaction_values
+          @total = @total - @transaction_values.last
         end
 
 end
