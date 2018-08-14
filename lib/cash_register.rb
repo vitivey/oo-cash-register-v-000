@@ -1,3 +1,5 @@
+requires "pry"
+
 class CashRegister
   attr_accessor :total, :title, :price, :discount
 
@@ -22,7 +24,7 @@ class CashRegister
         end
 
         def items
-          
+
         end
 
         def void_last_transaction
