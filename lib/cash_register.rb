@@ -12,8 +12,8 @@ class CashRegister
         end
 
         def apply_discount
-          @discounted_value=@total *@discount
-          "After the discount, the total comes to #{discounted_value}"
+          @total=@total *@discount
+          "After the discount, the total comes to #{total}"
         end
 
         def items
