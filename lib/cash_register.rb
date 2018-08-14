@@ -17,7 +17,7 @@ class CashRegister
           else
           @total=@total *(1- @discount/100.0)
           "After the discount, the total comes to $#{total.round}."
-        end
+          end
         end
 
         def items
