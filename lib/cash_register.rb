@@ -2,7 +2,7 @@ require "pry"
 
 class CashRegister
   attr_accessor :total, :title, :price, :discount
-
+  
         def initialize(discount=0)
           @total=0
           @discount=discount
@@ -11,6 +11,7 @@ class CashRegister
         def add_item(title, price, quantity=1)
           @total+=price*quantity
           @title=title
+          @@items_hash[@title] = quantity
           binding.pry
         end
 
@@ -24,7 +25,7 @@ class CashRegister
         end
 
         def items
-
+          @@items_hash
         end
 
         def void_last_transaction
