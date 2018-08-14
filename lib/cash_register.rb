@@ -32,6 +32,7 @@ class CashRegister
             end
           end
           array
+          binding.pry
         end
 
         def void_last_transaction
