@@ -35,6 +35,7 @@ class CashRegister
               i+=1
             end
           end
+          binding.pry
           array
         end
 
