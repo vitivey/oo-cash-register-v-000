@@ -32,8 +32,6 @@ class CashRegister
               array << item
               i+=1
             end
-              array << item
-            end
           end
           array
         end
