@@ -24,7 +24,7 @@ class CashRegister
         end
 
         def items
-          items_hash[@title] = quantity
+          @@items_hash
         end
 
         def void_last_transaction
