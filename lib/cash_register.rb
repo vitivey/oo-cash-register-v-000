@@ -12,7 +12,6 @@ class CashRegister
           @total+=price*quantity
           @title=title
           @@items_hash[@title] = quantity
-          binding.pry
         end
 
         def apply_discount
