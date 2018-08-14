@@ -28,7 +28,7 @@ class CashRegister
           array=[]
           @@items_hash.collect do |item, quantity|
             i=0
-            while i <=quantity
+            while i < quantity
               array << item
               i+=1
             end
